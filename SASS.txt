@@ -97,4 +97,36 @@ h1 {
 
 <div id="box"></div>
 ...................................................................................................
-5-
+5-Use @for to Create a Sass Loop
+<style type='text/scss'>
+@for $j from 1 to 6{
+  .text-#{$j}{font-size:15*$j}
+}
+
+
+</style>
+
+<p class="text-1">Hello</p>
+<p class="text-2">Hello</p>
+<p class="text-3">Hello</p>
+<p class="text-4">Hello</p>
+<p class="text-5">Hello</p>
+...................................................................................................
+6-Use @each to Map Over Items in a List
+<style type='text/scss'>
+@each $color in blue, black, red {
+  .#{$color}-bg {background-color:$color}
+}
+
+
+  div {
+    height: 200px;
+    width: 200px;
+  }
+</style>
+
+<div class="blue-bg"></div>
+<div class="black-bg"></div>
+<div class="red-bg"></div>
+...................................................................................................
+7-
